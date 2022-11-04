@@ -15,11 +15,11 @@ public class HttpClient {
         return HttpClient.sendRequest(Method.GET, endpoint);
     }
 
-    public static Response post(String endpoint, Genre body) {
+    public static Response post(String endpoint, Object body) {
         return HttpClient.sendRequest(Method.POST, endpoint, body);
     }
 
-    public static Response put(String endpoint, Genre body) {
+    public static Response put(String endpoint, Object body) {
         return HttpClient.sendRequest(Method.PUT, endpoint, body);
     }
 
@@ -31,7 +31,7 @@ public class HttpClient {
         return HttpClient.sendRequest(method, endpoint, null);
     }
 
-    private static Response sendRequest(Method method, String endpoint, Genre body) {
+    private static Response sendRequest(Method method, String endpoint, Object body) {
         String url = env.getProperty("service.host") + endpoint;
         RequestSpecification spec = given().auth().preemptive().basic("admin", "password");
         if (body != null) spec.contentType("application/json").body(body);
