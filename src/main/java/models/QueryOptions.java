@@ -15,6 +15,8 @@ public class QueryOptions {
     public boolean pagination;
     public int size;
     public String sortBy;
+    public int autorId;
+    public int genreId;
 
     // setting some of the default values
     public QueryOptions() {
@@ -27,5 +29,10 @@ public class QueryOptions {
         this.page = page;
         this.pagination = pagination;
         this.size = size;
+    }
+
+    public QueryOptions(int autorId, int genreId) {
+        this.autorId = autorId;
+        this.genreId = genreId;
     }
 }

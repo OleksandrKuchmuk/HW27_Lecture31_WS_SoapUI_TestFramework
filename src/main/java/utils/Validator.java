@@ -1,6 +1,7 @@
 package utils;
 
 import io.restassured.response.Response;
+import models.author.Name;
 import models.genre.Genre;
 import org.testng.Assert;
 
@@ -13,14 +14,20 @@ public class Validator {
                 return this;
         }
 
-        public Validator validateGenreName(String actualName, String expectedName) {
+        public Validator validateObjectName(String typeOfObject, String actualName, String expectedName) {
                 Assert.assertEquals(actualName, expectedName, String.format(
-                        "\nGenre Name is: '%s'.\nExpected: %s", actualName, expectedName));
+                        "\n"+typeOfObject +" Name is: '%s'.\nExpected: %s", actualName, expectedName));
                 return this;
         }
 
-        public Validator validateGenresCount(List<Genre> genres, int expected) {
-                Assert.assertEquals(genres.size(), expected);
+//        public Validator validateAuthorName(String actualName, String expectedName) {
+//                Assert.assertEquals(actualName, expectedName, String.format(
+//                        "\nAuthor Name is: '%s'.\nExpected: %s", actualName, expectedName));
+//                return this;
+//        }
+
+        public Validator validateObjectCount(List<Object> objects, int expected) {
+                Assert.assertEquals(objects.size(), expected);
                 return this;
         }
 }

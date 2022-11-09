@@ -23,7 +23,7 @@ public class GenreTests {
         Genre response = responseToModel.getAsGenreClass(responseCreateEntity);
         validator
                 .validateStatusCode(responseCreateEntity.getStatusCode(),SC_CREATED)
-                .validateGenreName(response.name, testName);
+                .validateObjectName("Genre",response.name, testName);
 
         genreService.deleteGenre(response.genreId);
     }
@@ -34,7 +34,7 @@ public class GenreTests {
         Response response = genreService.getGenres(new QueryOptions(1, true, expectedSize));
         validator
                 .validateStatusCode(response.getStatusCode(), SC_OK)
-                .validateGenresCount(responseToModel.getAsGenreClassArray(response), expectedSize);
+                .validateObjectCount(responseToModel.getAsGenreClassArray(response), expectedSize);
     }
 
     @Test (description = "Negative check for creation a genre")
@@ -55,5 +55,19 @@ public class GenreTests {
         Response responseCheckEntity = genreService.getGenreById(new QueryOptions(), genreId);
         validator
                 .validateStatusCode(responseCheckEntity.getStatusCode(), SC_NOT_FOUND);
+    }
+
+    @Test (description = "Positive check for update a genre")
+    public void verifyPutUbdateGenre () {
+        Response responseCreateEntity = genreService.createGenre(Genre.builder().name("testName").build());
+        Genre createResponse = responseToModel.getAsGenreClass(responseCreateEntity);
+        Response responseUpdateGenre = genreService.updateGenre(createResponse.genreId, Genre.builder().name("newName").build());
+
+        Genre updateResponse = responseToModel.getAsGenreClass(responseUpdateGenre);
+        validator
+                .validateStatusCode(responseUpdateGenre.getStatusCode(),SC_OK)
+                .validateObjectName("Genre",updateResponse.name, "newName");
+
+        genreService.deleteGenre(updateResponse.genreId);
     }
 }

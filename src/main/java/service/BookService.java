@@ -4,7 +4,6 @@ import client.HttpClient;
 import io.restassured.response.Response;
 import models.QueryOptions;
 import models.book.Book;
-import models.genre.Genre;
 import utils.EndpointBuilder;
 
 public class BookService {
@@ -20,14 +19,19 @@ public class BookService {
         return HttpClient.get(endpoint.build());
     }
 
-    public Response createBook(Book book) {
-        String endpoint = new EndpointBuilder().pathParameter("book").build();
+    public Response createBook(int authorId, int genreId, Book book) {
+        String endpoint = new EndpointBuilder().pathParameter("book").queryParam("authorId", authorId).queryParam("genreId", genreId).build();
         return HttpClient.post(endpoint, book);
     }
 
     public Response deleteBook(int bookId) {
         String endpoint = new EndpointBuilder().pathParameter("book").pathParameter(bookId).build();
         return HttpClient.delete(endpoint);
+    }
+
+    public Response updateBook(int bookId, Book book) {
+        String endpoint = new EndpointBuilder().pathParameter("book").pathParameter(bookId).build();
+        return HttpClient.put(endpoint, book);
     }
 
     public Response getBookById(QueryOptions options, Integer id) {

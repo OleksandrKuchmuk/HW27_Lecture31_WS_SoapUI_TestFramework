@@ -14,9 +14,6 @@ public class Book {
     public String bookName;
     public String bookDescription;
     public String bookLanguage;
-    public Integer pagesCount;
-    public Integer height;
-    public Integer width;
-    public Integer length;
+    public Additional additional;
     public Integer publicationYear;
 }

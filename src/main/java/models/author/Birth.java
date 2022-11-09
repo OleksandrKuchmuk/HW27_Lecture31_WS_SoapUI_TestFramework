@@ -9,13 +9,8 @@ import lombok.Setter;
 @Builder
 @Setter
 @Getter
-public class Author {
-
-    public int authorId;
-    public Name name;
-    public String nationality;
-    public Birth birth;
-    public String description;
-
-
+public class Birth {
+    public String date;
+    public String country;
+    public String city;
 }

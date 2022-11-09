@@ -29,6 +29,11 @@ public class GenreService {
         return HttpClient.delete(endpoint);
     }
 
+    public Response updateGenre(int genreId, Genre genre) {
+        String endpoint = new EndpointBuilder().pathParameter("genre").pathParameter(genreId).build();
+        return HttpClient.put(endpoint, genre);
+    }
+
     public Response getGenreById(QueryOptions options, Integer id) {
         EndpointBuilder endpoint = new EndpointBuilder().pathParameter("genre").pathParameter(id);
         if (options.orderType != null) endpoint.queryParam("orderType", options.orderType);

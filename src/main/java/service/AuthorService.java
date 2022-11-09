@@ -21,13 +21,18 @@ public class AuthorService {
     }
 
     public Response createAuthor(Author author) {
-        String endpoint = new EndpointBuilder().pathParameter("genre").build();
+        String endpoint = new EndpointBuilder().pathParameter("author").build();
         return HttpClient.post(endpoint, author);
     }
 
     public Response deleteAuthor(int authorId) {
         String endpoint = new EndpointBuilder().pathParameter("author").pathParameter(authorId).build();
         return HttpClient.delete(endpoint);
+    }
+
+    public Response updateAuthor(int authorId, Author author) {
+        String endpoint = new EndpointBuilder().pathParameter("author").pathParameter(authorId).build();
+        return HttpClient.put(endpoint, author);
     }
 
     public Response getAuthorById(QueryOptions options, Integer id) {
