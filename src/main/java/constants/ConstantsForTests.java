@@ -3,48 +3,45 @@ package constants;
 public class ConstantsForTests {
 
     public static class Names {
-        public static final String AUTHOR_FIRST_NAME = "yfwyuirysvh";
-        public static final String AUTHOR_LAST_NAME = "desrtyrtetoyer";
-        public static final String AUTHOR_TO_UPDATE_FIRST_NAME = "vdd6kr5othe";
-        public static final String AUTHOR_TO_UPDATE_LAST_NAME = "rgodertbherg";
-        public static final String AUTHOR_NEW_FIRST_NAME = "geerdhj";
-        public static final String AUTHOR_NEW_LAST_NAME = "oyvroh";
+        public static final String AUTHOR_FIRST_NAME = "Panas";
+        public static final String AUTHOR_LAST_NAME = "Myrnyj";
+        public static final String AUTHOR_NEW_FIRST_NAME = "Ivan";
+        public static final String AUTHOR_NEW_LAST_NAME = "Nechuj-Levytskyj";
 
-        public static final String BOOK_NAME = "ttdreyuutrw";
-        public static final String BOOK_NAME_TO_UPDATE = "toyi7ktw";
-        public static final String BOOK_NEW_NAME = "ortrthygf";
+        public static final String BOOK_NAME = "Are the oxen roaring like a full manger";
+        public static final String BOOK_NEW_NAME = "Kaidash family";
 
-        public static final String GENRE_NAME = "4wrtg5rhyhrt";
-        public static final String GENRE_NEW_NAME = "ydehrhri";
+        public static final String GENRE_NAME = "Novel";
+        public static final String GENRE_NEW_NAME = "Story";
 
     }
 
     public static class NationalytyLocationsAndLanguages {
-        public static final String AUTHOR_NATIONALITY = "Enlsdvegrthoish";
-        public static final String AUTHOR_BIRTH_CITY = "Londgron";
-        public static final String AUTHOR_BIRTH_COUNTRY = "Ensgsdvsgd";
-        public static final String AUTHOR_NEW_NATIONALITY = "fgedvsvdhglish";
-        public static final String AUTHOR_NEW_BIRTH_CITY = "Edifddvsghburg";
-        public static final String AUTHOR_NEW_BIRTH_COUNTRY = "Enervgdtand";
+        public static final String AUTHOR_NATIONALITY = "Ukrainian";
+        public static final String AUTHOR_BIRTH_CITY = "Myrghorod";
+        public static final String AUTHOR_BIRTH_COUNTRY = "Ukraine";
+        public static final String AUTHOR_NEW_NATIONALITY = "Ukrainian";
+        public static final String AUTHOR_NEW_BIRTH_CITY = "Stebliv";
+        public static final String AUTHOR_NEW_BIRTH_COUNTRY = "Ukraine";
 
-        public static final String BOOK_LANGUAGE = "4rthsryh";
-        public static final String BOOK_NEW_LANGUAGE = "r";
+        public static final String BOOK_LANGUAGE = "Ukrainian";
+        public static final String BOOK_NEW_LANGUAGE = "Ukrainian";
     }
 
     public static class Dates {
-        public static final String AUTHOR_BIRTH_DATE = "1582-02-25";
-        public static final String AUTHOR_NEW_BIRTH_DATE = "1254-05-25";
+        public static final String AUTHOR_BIRTH_DATE = "1849-05-01";
+        public static final String AUTHOR_NEW_BIRTH_DATE = "1838-11-13";
 
-        public static final int BOOK_PUBLICATION_YEAR = 1970;
-        public static final int BOOK_NEW_PUBLICATION_YEAR = 1985;
+        public static final int BOOK_PUBLICATION_YEAR = 1875;
+        public static final int BOOK_NEW_PUBLICATION_YEAR = 1879;
     }
 
     public static class Description {
-        public static final String AUTHOR_DESCRIPTION = "oeevtoe";
-        public static final String AUTHOR_NEW_DESCRIPTION = "erddegohth";
+        public static final String AUTHOR_DESCRIPTION = "UKR";
+        public static final String AUTHOR_NEW_DESCRIPTION = "UKR";
 
-        public static final String BOOK_DESCRIPTION = "erhr";
-        public static final String BOOK_NEW_DESCRIPTION = "egedvofth";
+        public static final String BOOK_DESCRIPTION = "UKR";
+        public static final String BOOK_NEW_DESCRIPTION = "UKR";
     }
 
     public static class BookParameters {

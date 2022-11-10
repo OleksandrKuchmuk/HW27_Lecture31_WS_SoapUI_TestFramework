@@ -1,8 +1,8 @@
 package utils;
 
 public class EndpointBuilder {
-    private String endpoint;
     static PropertiesReader env = EnvConfig.getInstance();
+    private String endpoint;
 
     public EndpointBuilder() {
         this.endpoint = env.getProperty("service.library");

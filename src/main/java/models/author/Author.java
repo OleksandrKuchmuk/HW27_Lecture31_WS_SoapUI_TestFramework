@@ -10,12 +10,9 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Author {
-
     public Integer authorId;
     public Name name;
     public String nationality;
     public Birth birth;
     public String description;
-
-
 }

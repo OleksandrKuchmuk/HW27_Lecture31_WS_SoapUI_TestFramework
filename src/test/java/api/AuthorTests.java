@@ -10,7 +10,6 @@ import models.author.Birth;
 import models.author.Name;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.annotations.AfterGroups;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import service.AuthorService;
@@ -22,7 +21,6 @@ import static constants.ConstantsForTests.Dates.AUTHOR_NEW_BIRTH_DATE;
 import static constants.ConstantsForTests.Description.AUTHOR_DESCRIPTION;
 import static constants.ConstantsForTests.Description.AUTHOR_NEW_DESCRIPTION;
 import static constants.ConstantsForTests.Names.*;
-
 import static constants.ConstantsForTests.NationalytyLocationsAndLanguages.*;
 import static org.apache.http.HttpStatus.*;
 
@@ -30,7 +28,6 @@ import static org.apache.http.HttpStatus.*;
 @Feature("Rest-api feature in AuthorTests")
 public class AuthorTests {
     private static final Logger LOGGER = LogManager.getLogger(AuthorTests.class);
-
     private final AuthorService authorService = new AuthorService();
     private final ResponseToModel responseToModel = new ResponseToModel();
     public Validator validator = new Validator();
@@ -53,7 +50,7 @@ public class AuthorTests {
         validator
                 .validateStatusCode(responseCreateEntity.getStatusCode(), SC_CREATED)
                 .validateObjectName("Author", response.name.getFirst(), AUTHOR_FIRST_NAME);
-        }
+    }
 
     @Step("Positive check for search Authors")
     @Test(description = "Positive check for search Authors")
@@ -110,7 +107,7 @@ public class AuthorTests {
     public void verifyUpdateAuthor() {
         LOGGER.info("!!! Test: Positive check for update Author");
         LOGGER.info("Create object of Name.class");
-        Name newAuthorName = new Name(AUTHOR_TO_UPDATE_FIRST_NAME, AUTHOR_TO_UPDATE_LAST_NAME);
+        Name newAuthorName = new Name(AUTHOR_FIRST_NAME, AUTHOR_LAST_NAME);
         LOGGER.info("Make request to create Author");
         Response responseCreateEntity = authorService.createAuthor(Author.builder()
                 .name(newAuthorName)
@@ -121,7 +118,7 @@ public class AuthorTests {
         LOGGER.info("Getting responce with information about status of creation Author");
         response = responseToModel.getAsAuthorClass(responseCreateEntity);
         Integer authorId = response.authorId;
-                LOGGER.info("Create object of Name.class with parameters to update");
+        LOGGER.info("Create object of Name.class with parameters to update");
         LOGGER.info("Make request to update Author");
         Response updateAuthor = authorService.updateAuthor(authorId, Author.builder()
                 .name(new Name(AUTHOR_NEW_FIRST_NAME, AUTHOR_NEW_LAST_NAME))
@@ -139,7 +136,7 @@ public class AuthorTests {
 
     @Step("Deleting Authors after Test")
     @AfterMethod
-    public void deleteAuthor(){
+    public void deleteAuthor() {
         LOGGER.info("Delete Author after creating Author for test");
         authorService.deleteAuthor(response.authorId);
     }

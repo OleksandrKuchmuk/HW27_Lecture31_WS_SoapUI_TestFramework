@@ -10,7 +10,6 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Additional {
-
     public Integer pageCount;
     private Size size;
 }

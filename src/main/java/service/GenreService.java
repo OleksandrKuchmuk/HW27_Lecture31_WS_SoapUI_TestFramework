@@ -7,7 +7,7 @@ import models.genre.Genre;
 import utils.EndpointBuilder;
 
 public class GenreService {
-    
+
     public Response getGenres(QueryOptions options) {
         EndpointBuilder endpoint = new EndpointBuilder().pathParameter("genres");
         if (options.orderType != null) endpoint.queryParam("orderType", options.orderType);

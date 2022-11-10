@@ -22,30 +22,29 @@ import static org.apache.http.HttpStatus.*;
 @Feature("Rest-api feature in GenreTests")
 public class GenreTests {
     private static final Logger LOGGER = LogManager.getLogger(GenreTests.class);
-    public Validator validator = new Validator();
     private final GenreService genreService = new GenreService();
     private final ResponseToModel responseToModel = new ResponseToModel();
+    public Validator validator = new Validator();
 
     @Step("Positive check for creation a genre")
-    @Test (description = "Positive check for creation a genre")
-    public void verifyPostCreateGenre () {
+    @Test(description = "Positive check for creation a genre")
+    public void verifyPostCreateGenre() {
         LOGGER.info("!!! Test: Positive check for creation a genre");
-//        String testName = "newGenre";
         LOGGER.info("Make request to create genre");
         Response responseCreateEntity = genreService.createGenre(Genre.builder().name(GENRE_NAME).build());
         LOGGER.info("Getting responce with information about status of creation of Genre");
         Genre response = responseToModel.getAsGenreClass(responseCreateEntity);
         LOGGER.info("Validate StatusCode and Genre name");
         validator
-                .validateStatusCode(responseCreateEntity.getStatusCode(),SC_CREATED)
-                .validateObjectName("Genre",response.name, GENRE_NAME);
+                .validateStatusCode(responseCreateEntity.getStatusCode(), SC_CREATED)
+                .validateObjectName("Genre", response.name, GENRE_NAME);
         LOGGER.info("Deleting Genre by genreId after finish test");
         genreService.deleteGenre(response.genreId);
     }
 
-@Step("Positive check for search genres")
-    @Test (description = "Positive check for search genres")
-    public void verifyGetSearchGenres () {
+    @Step("Positive check for search genres")
+    @Test(description = "Positive check for search genres")
+    public void verifyGetSearchGenres() {
         LOGGER.info("!!! Test: Positive check for search genres");
         int expectedSize = 2;
         LOGGER.info("Make request to search Genres");
@@ -57,8 +56,8 @@ public class GenreTests {
     }
 
     @Step("Negative check for creation a genre")
-    @Test (description = "Negative check for creation a genre")
-    public void verifyPostErrorCreateGenre () {
+    @Test(description = "Negative check for creation a genre")
+    public void verifyPostErrorCreateGenre() {
         LOGGER.info("!!! Test: Negative check for creation a genre");
         LOGGER.info("Make incorrect request to get StatusCode 'Bad Request'");
         Response responseCreateEntity = genreService.createGenre(Genre.builder().build());
@@ -68,8 +67,8 @@ public class GenreTests {
     }
 
     @Step("Positive check for delete genre")
-    @Test (description = "Positive check for delete genre")
-    public void verifyDeleteGenre () {
+    @Test(description = "Positive check for delete genre")
+    public void verifyDeleteGenre() {
         LOGGER.info("!!! Test: Positive check for delete Genre");
         LOGGER.info("Make request to create Genre in method 'verifyDeleteGenre()'");
         Response responseCreateEntity = genreService.createGenre(Genre.builder().name(GENRE_NAME).build());
@@ -87,8 +86,8 @@ public class GenreTests {
     }
 
     @Step("Positive check for update a genre")
-    @Test (description = "Positive check for update a genre")
-    public void verifyPutUbdateGenre () {
+    @Test(description = "Positive check for update a genre")
+    public void verifyPutUbdateGenre() {
         LOGGER.info("!!! Test: Positive check for update Genre");
         LOGGER.info("Make request to create Genre");
         Response responseCreateEntity = genreService.createGenre(Genre.builder().name(GENRE_NAME).build());
@@ -100,8 +99,8 @@ public class GenreTests {
         Genre updateResponse = responseToModel.getAsGenreClass(responseUpdateGenre);
         LOGGER.info("Validate StatusCode and new Genre name");
         validator
-                .validateStatusCode(responseUpdateGenre.getStatusCode(),SC_OK)
-                .validateObjectName("Genre",updateResponse.name, GENRE_NEW_NAME);
+                .validateStatusCode(responseUpdateGenre.getStatusCode(), SC_OK)
+                .validateObjectName("Genre", updateResponse.name, GENRE_NEW_NAME);
 
         LOGGER.info("Deleting Genre by genreId after test");
         genreService.deleteGenre(updateResponse.genreId);

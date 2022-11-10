@@ -5,7 +5,6 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import models.author.Author;
 import models.book.Book;
-import models.genre.Genre;
 import utils.EnvConfig;
 import utils.PropertiesReader;
 
@@ -13,6 +12,7 @@ import static io.restassured.RestAssured.given;
 
 public class HttpClient {
     static PropertiesReader env = EnvConfig.getInstance();
+
     public static Response get(String endpoint) {
         return HttpClient.sendRequest(Method.GET, endpoint);
     }
@@ -20,6 +20,7 @@ public class HttpClient {
     public static Response post(String endpoint, Object body) {
         return HttpClient.sendRequest(Method.POST, endpoint, body);
     }
+
     public static Response post(String endpoint, Author body) {
         return HttpClient.sendRequest(Method.POST, endpoint, body);
     }

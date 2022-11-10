@@ -4,14 +4,13 @@ import client.HttpClient;
 import io.restassured.response.Response;
 import models.QueryOptions;
 import models.author.Author;
-import models.genre.Genre;
 import utils.EndpointBuilder;
 
 public class AuthorService {
 
-    public Response getAuthors(QueryOptions options){
+    public Response getAuthors(QueryOptions options) {
         EndpointBuilder endpoint = new EndpointBuilder().pathParameter("authors");
-        if (options.orderType !=null) endpoint.queryParam("orderType", options.orderType);
+        if (options.orderType != null) endpoint.queryParam("orderType", options.orderType);
         endpoint
                 .queryParam("page", options.page)
                 .queryParam("pagination", options.pagination)
