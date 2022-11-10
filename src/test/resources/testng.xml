@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/Learning_QA/Cursor/HW27_Lecture31_WS_SoapUI_TestFramework">
+        <classes>
+            <class name="api.AuthorTests">
+                <methods>
+                    <include name="verifyPostCreateAuthor"/>
+                    <include name="verifyGetSearchAuthors"/>
+                    <include name="verifyPostErrorCreateAuthor"/>
+                    <include name="verifyDeleteAuthor"/>
+                    <include name="verifyUpdateAuthor"/>
+                </methods>
+            </class>
+            <class name="api.BookTests">
+                <methods>
+                    <include name="verifyPostCreateBook"/>
+                    <include name="verifyGetSearchBooks"/>
+                    <include name="verifyPostErrorCreateBook"/>
+                    <include name="verifyDeletebook"/>
+                    <include name="verifyUpdateBook"/>
+                </methods>
+            </class>
+            <class name="api.GenreTests">
+                <methods>
+                    <include name="verifyPostCreateGenre"/>
+                    <include name="verifyGetSearchGenres"/>
+                    <include name="verifyPostErrorCreateGenre"/>
+                    <include name="verifyDeleteGenre"/>
+                    <include name="verifyPutUbdateGenre"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

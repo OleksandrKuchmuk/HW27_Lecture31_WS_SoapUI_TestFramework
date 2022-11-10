@@ -11,7 +11,7 @@ import lombok.Setter;
 @Getter
 public class Author {
 
-    public int authorId;
+    public Integer authorId;
     public Name name;
     public String nationality;
     public Birth birth;

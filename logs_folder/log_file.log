@@ -1,0 +1,85 @@
+[INFO] 2022-11-09 17:17:35.485 AuthorTests:70 - !!! Test: Positive check for delete Author 
+[INFO] 2022-11-09 17:17:35.501 AuthorTests:71 - Create object of Name.class 
+[INFO] 2022-11-09 17:17:35.501 AuthorTests:73 - Make request to create author in method 'verifyDeleteAuthor()' 
+[INFO] 2022-11-09 17:17:38.079 AuthorTests:80 - Getting response about creating author in method 'verifyDeleteAuthor()' 
+[INFO] 2022-11-09 17:17:38.179 AuthorTests:48 - !!! Test: Make positive check for search Authors 
+[INFO] 2022-11-09 17:17:38.179 AuthorTests:50 - Make request to search authors 
+[INFO] 2022-11-09 17:17:38.439 AuthorTests:52 - Validate StatusCode and count of Authors objects 
+[INFO] 2022-11-09 17:17:38.439 AuthorTests:28 - !!! Test: Make positive Test of creation an Author 
+[INFO] 2022-11-09 17:17:38.439 AuthorTests:30 - Make request to create Author 
+[INFO] 2022-11-09 17:17:38.577 AuthorTests:37 - Getting responce with information about status of creation Author 
+[INFO] 2022-11-09 17:17:38.592 AuthorTests:60 - !!! Test: Negative check for creation an Author 
+[INFO] 2022-11-09 17:17:38.592 AuthorTests:61 - Make incorrect request to get StatusCode 'Bad Request' 
+[INFO] 2022-11-09 17:17:38.708 AuthorTests:63 - Validate if we get StatusCode 'Bad Request' 
+[INFO] 2022-11-09 17:17:38.708 AuthorTests:96 - !!! Test: Positive check for update Author 
+[INFO] 2022-11-09 17:17:38.708 AuthorTests:97 - Create object of Name.class 
+[INFO] 2022-11-09 17:17:38.708 AuthorTests:99 - Make request to create Author 
+[INFO] 2022-11-09 17:17:38.837 AuthorTests:106 - Getting responce with information about status of creation Author 
+[INFO] 2022-11-09 17:17:38.837 AuthorTests:130 - Delete Author after creating Author for test 
+[INFO] 2022-11-09 17:20:09.314 BookTests:42 - !!! Precondition: Create Genre And Create Author BeforeMethod for some tests 
+[INFO] 2022-11-09 17:20:09.969 BookTests:44 - Create Genre 
+[INFO] 2022-11-09 17:20:11.945 BookTests:79 - !!! Test: Positive check for search books 
+[INFO] 2022-11-09 17:20:11.945 BookTests:81 - Make request to search Books 
+[INFO] 2022-11-09 17:20:12.218 BookTests:83 - Validate StatusCode and count of Books objects 
+[INFO] 2022-11-09 17:20:12.238 BookTests:91 - !!! Test: Negative check for creation a book 
+[INFO] 2022-11-09 17:20:12.238 BookTests:92 - Make incorrect request to get StatusCode 'Bad Request' 
+[INFO] 2022-11-09 17:20:12.375 BookTests:94 - Validate if we get StatusCode 'Bad Request' 
+[INFO] 2022-11-09 17:24:15.970 AuthorTests:70 - !!! Test: Positive check for delete Author 
+[INFO] 2022-11-09 17:24:15.970 AuthorTests:71 - Create object of Name.class 
+[INFO] 2022-11-09 17:24:15.970 AuthorTests:73 - Make request to create author in method 'verifyDeleteAuthor()' 
+[INFO] 2022-11-09 17:24:18.379 AuthorTests:80 - Getting response about creating author in method 'verifyDeleteAuthor()' 
+[INFO] 2022-11-09 17:24:18.480 AuthorTests:48 - !!! Test: Make positive check for search Authors 
+[INFO] 2022-11-09 17:24:18.480 AuthorTests:50 - Make request to search authors 
+[INFO] 2022-11-09 17:24:18.724 AuthorTests:52 - Validate StatusCode and count of Authors objects 
+[INFO] 2022-11-09 17:24:18.745 AuthorTests:28 - !!! Test: Make positive Test of creation an Author 
+[INFO] 2022-11-09 17:24:18.753 AuthorTests:30 - Make request to create Author 
+[INFO] 2022-11-09 17:24:18.927 AuthorTests:37 - Getting responce with information about status of creation Author 
+[INFO] 2022-11-09 17:24:18.935 AuthorTests:60 - !!! Test: Negative check for creation an Author 
+[INFO] 2022-11-09 17:24:18.935 AuthorTests:61 - Make incorrect request to get StatusCode 'Bad Request' 
+[INFO] 2022-11-09 17:24:19.079 AuthorTests:63 - Validate if we get StatusCode 'Bad Request' 
+[INFO] 2022-11-09 17:24:19.087 AuthorTests:96 - !!! Test: Positive check for update Author 
+[INFO] 2022-11-09 17:24:19.087 AuthorTests:97 - Create object of Name.class 
+[INFO] 2022-11-09 17:24:19.087 AuthorTests:99 - Make request to create Author 
+[INFO] 2022-11-09 17:24:19.203 AuthorTests:106 - Getting responce with information about status of creation Author 
+[INFO] 2022-11-09 17:24:19.203 AuthorTests:130 - Delete Author after creating Author for test 
+[INFO] 2022-11-09 17:47:22.279 GenreTests:62 - !!! Test: Positive check for delete Genre 
+[INFO] 2022-11-09 17:47:22.279 GenreTests:63 - Make request to create Genre in method 'verifyDeleteGenre()' 
+[INFO] 2022-11-09 17:47:24.900 GenreTests:65 - Getting response about creating Genre in method 'verifyDeleteGenre()' 
+[INFO] 2022-11-09 17:47:25.007 GenreTests:40 - !!! Test: Positive check for search genres 
+[INFO] 2022-11-09 17:47:25.015 GenreTests:42 - Make request to search Genres 
+[INFO] 2022-11-09 17:47:25.287 GenreTests:44 - Validate StatusCode and count of Genres objects 
+[INFO] 2022-11-09 17:47:25.298 GenreTests:24 - !!! Test: Positive check for creation a genre 
+[INFO] 2022-11-09 17:47:25.298 GenreTests:26 - Make request to create genre 
+[INFO] 2022-11-09 17:47:25.480 GenreTests:28 - Getting responce with information about status of creation of Genre 
+[INFO] 2022-11-09 17:47:25.482 GenreTests:52 - !!! Test: Negative check for creation a genre 
+[INFO] 2022-11-09 17:47:25.482 GenreTests:53 - Make incorrect request to get StatusCode 'Bad Request' 
+[INFO] 2022-11-09 17:47:25.624 GenreTests:55 - Validate if we get StatusCode 'Bad Request' 
+[INFO] 2022-11-09 17:47:25.624 GenreTests:80 - !!! Test: Positive check for update Genre 
+[INFO] 2022-11-09 17:47:25.624 GenreTests:81 - Make request to create Genre 
+[INFO] 2022-11-09 17:47:25.756 GenreTests:83 - Getting responce with information about status of creation Genre 
+[INFO] 2022-11-09 17:47:25.756 AuthorTests:70 - !!! Test: Positive check for delete Author 
+[INFO] 2022-11-09 17:47:25.756 AuthorTests:71 - Create object of Name.class 
+[INFO] 2022-11-09 17:47:25.772 AuthorTests:73 - Make request to create author in method 'verifyDeleteAuthor()' 
+[INFO] 2022-11-09 17:47:25.910 AuthorTests:80 - Getting response about creating author in method 'verifyDeleteAuthor()' 
+[INFO] 2022-11-09 17:47:25.925 AuthorTests:48 - !!! Test: Make positive check for search Authors 
+[INFO] 2022-11-09 17:47:25.925 AuthorTests:50 - Make request to search authors 
+[INFO] 2022-11-09 17:47:26.041 AuthorTests:52 - Validate StatusCode and count of Authors objects 
+[INFO] 2022-11-09 17:47:26.057 AuthorTests:28 - !!! Test: Make positive Test of creation an Author 
+[INFO] 2022-11-09 17:47:26.057 AuthorTests:30 - Make request to create Author 
+[INFO] 2022-11-09 17:47:26.173 AuthorTests:37 - Getting responce with information about status of creation Author 
+[INFO] 2022-11-09 17:47:26.173 AuthorTests:60 - !!! Test: Negative check for creation an Author 
+[INFO] 2022-11-09 17:47:26.173 AuthorTests:61 - Make incorrect request to get StatusCode 'Bad Request' 
+[INFO] 2022-11-09 17:47:26.295 AuthorTests:63 - Validate if we get StatusCode 'Bad Request' 
+[INFO] 2022-11-09 17:47:26.295 AuthorTests:95 - !!! Test: Positive check for update Author 
+[INFO] 2022-11-09 17:47:26.295 AuthorTests:96 - Create object of Name.class 
+[INFO] 2022-11-09 17:47:26.295 AuthorTests:98 - Make request to create Author 
+[INFO] 2022-11-09 17:47:26.411 AuthorTests:105 - Getting responce with information about status of creation Author 
+[INFO] 2022-11-09 17:47:26.426 AuthorTests:129 - Delete Author after creating Author for test 
+[INFO] 2022-11-09 17:47:26.426 BookTests:42 - !!! Precondition: Create Genre And Create Author BeforeMethod for some tests 
+[INFO] 2022-11-09 17:47:26.426 BookTests:44 - Create Genre 
+[INFO] 2022-11-09 17:47:26.544 BookTests:79 - !!! Test: Positive check for search books 
+[INFO] 2022-11-09 17:47:26.544 BookTests:81 - Make request to search Books 
+[INFO] 2022-11-09 17:47:26.658 BookTests:83 - Validate StatusCode and count of Books objects 
+[INFO] 2022-11-09 17:47:26.673 BookTests:91 - !!! Test: Negative check for creation a book 
+[INFO] 2022-11-09 17:47:26.673 BookTests:92 - Make incorrect request to get StatusCode 'Bad Request' 
+[INFO] 2022-11-09 17:47:26.796 BookTests:94 - Validate if we get StatusCode 'Bad Request' 

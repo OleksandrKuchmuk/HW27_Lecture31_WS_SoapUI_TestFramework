@@ -1,0 +1,46 @@
+configuration:
+  Properties:
+    Property:
+      name: logger
+      value: logs_folder
+
+  Appenders:
+    Console:
+      - name: myConsole
+        PatternLayout:
+          disableAnsi: false
+          Pattern:  "%highlight{%-5level}{FATAL=bg_red}	%style{%date{yyyy-MM-dd  HH:mm:ss.SSS}}{blue} %class{1}:%L - %highlight{%msg} %xEx{short}%n"
+#        Filters:
+#          ThresholdFilter:
+#            level: error
+#            onMatch: DENY
+#            onMismatch: NEUTRAL
+
+
+    File:
+      - name: myFile
+        fileName: ${logger}/log_file.log
+        PatternLayout:
+          Pattern: "[%level] %d{yyyy-MM-dd HH:mm:ss.SSS} %class{1}:%L - %msg %xEx{short}%n"
+
+#        Filters:
+#          ThresholdFilter:
+#            level: warn
+#            onMatch: DENY
+#            onMismatch: NEUTRAL
+
+  Loggers:
+    Root:
+      level: all
+      AppenderRef:
+        - ref: myFile
+          level: info
+        - ref: myConsole
+          level: info
+
+    Logger:
+      - name: com.epam.Main
+        level: all
+        AppenderRef:
+         - ref: myConsole
+           level: trace
